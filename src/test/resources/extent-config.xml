@@ -1,0 +1,10 @@
+<extentreports>
+    <configuration>
+        <theme>dark</theme>
+        <encoding>UTF-8</encoding>
+        <protocol>HTTPS</protocol>
+        <timelineEnabled>true</timelineEnabled>
+        <documentTitle>Automation Report</documentTitle>
+        <reportName>Test Execution Report</reportName>
+    </configuration>
+</extentreports>
