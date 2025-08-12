@@ -38,7 +38,7 @@ jobs:
 
       # Run Maven tests
       - name: Run Tests on BrowserStack
-        run: mvn clean test -Dbrowser=browserstack
+        run: mvn clean test -DRUN_ENV=browserstack
 
         env:
           BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
