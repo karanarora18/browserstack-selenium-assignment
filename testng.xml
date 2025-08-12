@@ -3,9 +3,9 @@
 
     <test name="Desktop-Chrome">
         <parameter name="browser" value="chrome"/>
-        <parameter name="browser_version" value="139.0"/>
         <parameter name="os" value="Windows"/>
         <parameter name="os_version" value="11"/>
+        <parameter name="browser_version" value="latest"/>
         <classes>
             <class name="io.github.karanarora18.runners.TestRunner"/>
         </classes>
@@ -13,17 +13,18 @@
 
     <test name="Desktop-Firefox">
         <parameter name="browser" value="firefox"/>
-        <parameter name="browser_version" value="140.0"/>
-        <parameter name="os" value="Windows"/>
-        <parameter name="os_version" value="11"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="os_version" value="Sequoia"/>
+        <parameter name="browser_version" value="latest"/>
         <classes>
             <class name="io.github.karanarora18.runners.TestRunner"/>
         </classes>
     </test>
 
     <test name="Mobile-Android">
-        <parameter name="browser" value="chrome"/> <!-- Changed from browserName to browser -->
-        <parameter name="device" value="Samsung Galaxy S23"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="device" value="Samsung Galaxy S23 Ultra"/>
+        <parameter name="os_version" value="13.0"/>
         <parameter name="realMobile" value="true"/>
         <classes>
             <class name="io.github.karanarora18.runners.TestRunner"/>
@@ -31,8 +32,9 @@
     </test>
 
     <test name="Mobile-iOS">
-        <parameter name="browser" value="safari"/> <!-- Changed from browserName to browser -->
-        <parameter name="device" value="iPhone 15"/>
+        <parameter name="browser" value="safari"/>
+        <parameter name="device" value="iPhone 14 Pro Max"/>
+        <parameter name="os_version" value="16"/>
         <parameter name="realMobile" value="true"/>
         <classes>
             <class name="io.github.karanarora18.runners.TestRunner"/>
@@ -41,9 +43,9 @@
 
     <test name="Desktop-Edge">
         <parameter name="browser" value="edge"/>
-        <parameter name="browser_version" value="137.0"/>
         <parameter name="os" value="Windows"/>
-        <parameter name="os_version" value="10"/>
+        <parameter name="os_version" value="11"/>
+        <parameter name="browser_version" value="latest"/>
         <classes>
             <class name="io.github.karanarora18.runners.TestRunner"/>
         </classes>
