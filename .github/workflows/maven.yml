@@ -38,4 +38,4 @@ jobs:
 
       # Run Maven tests
       - name: Run Tests on BrowserStack
-        run: mvn clean test -DRUN_ENV=browserstack -DBROWSERSTACK_USERNAME=${{ secrets.BROWSERSTACK_USERNAME }} -DBROWSERSTACK_ACCESSKEY=${{ secrets.BROWSERSTACK_ACCESSKEY }} -DRAPID_KEY=${{ secrets.RAPID_KEY }}
+        run: mvn clean test -DRUN_ENV=browserstack -Dsurefire.suiteXmlFiles=testng.xml -DBROWSERSTACK_USERNAME=${{ secrets.BROWSERSTACK_USERNAME }} -DBROWSERSTACK_ACCESSKEY=${{ secrets.BROWSERSTACK_ACCESSKEY }} -DRAPID_KEY=${{ secrets.RAPID_KEY }}
