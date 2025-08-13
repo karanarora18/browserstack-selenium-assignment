@@ -3,7 +3,7 @@
     <listeners>
         <listener class-name="io.github.karanarora18.listeners.ParameterListener"/>
     </listeners>
-    <test name="Desktop-Chrome">
+    <test name="Desktop-Chrome-Windows">
         <parameter name="browser" value="Chrome"/>
         <parameter name="os" value="Windows"/>
         <parameter name="os_version" value="11"/>
@@ -14,11 +14,11 @@
 
     </test>
 
-    <test name="Desktop-Firefox">
-        <parameter name="browser" value="Firefox"/>
+    <test name="Desktop-Chrome-MacOS">
+        <parameter name="browser" value="Chrome"/>
         <parameter name="os" value="OS X"/>
         <parameter name="os_version" value="Sequoia"/>
-        <parameter name="browser_version" value="140.0"/>
+        <parameter name="browser_version" value="138.0"/>
         <classes>
             <class name="io.github.karanarora18.runners.TestRunner"/>
         </classes>
