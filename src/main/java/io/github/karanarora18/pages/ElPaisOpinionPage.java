@@ -82,17 +82,17 @@ public class ElPaisOpinionPage extends ElementActions {
             System.out.println("Headline "+(i++)+": " + header_title);
             dataManager.articleHeadersInSpanish.add(header_title);
             System.out.println("Content: "+getContent(article));
-            if(ConfigManager.getConfigValue("RUN_ENV").equalsIgnoreCase("local")) {
                 String img_url = getArticleImage(article);
                 if (img_url != null) {
-                    System.out.println("Image present. Downloading Image...");
-                    String filename = "article_" + i + ".jpg";
-                    CommonUtilities.downloadImage(img_url, filename);
+                    if(ConfigManager.getConfigValue("RUN_ENV").equalsIgnoreCase("local")) {
+                        System.out.println("Image present. Downloading Image...");
+                        String filename = "article_" + i + ".jpg";
+                        CommonUtilities.downloadImage(img_url, filename);
+                    }else {
+                        System.out.println("Image present. Not downloading image as RUN_ENV is not local");
+                    }
                 } else {
                     System.out.println("Image is not present for this article");
-                }
-            }else{
-                System.out.println("Not downloading image as RUN_ENV is not local");
             }
             System.out.println("\n");
         }

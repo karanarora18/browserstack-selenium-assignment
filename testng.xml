@@ -1,21 +1,24 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="BrowserStackSuite" parallel="tests" thread-count="5">
-
+    <listeners>
+        <listener class-name="io.github.karanarora18.listeners.ParameterListener"/>
+    </listeners>
     <test name="Desktop-Chrome">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="os" value="Windows"/>
         <parameter name="os_version" value="11"/>
-        <parameter name="browser_version" value="latest"/>
+        <parameter name="browser_version" value="138.0"/>
         <classes>
             <class name="io.github.karanarora18.runners.TestRunner"/>
         </classes>
+
     </test>
 
     <test name="Desktop-Firefox">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="os" value="OS X"/>
         <parameter name="os_version" value="Sequoia"/>
-        <parameter name="browser_version" value="latest"/>
+        <parameter name="browser_version" value="140.0"/>
         <classes>
             <class name="io.github.karanarora18.runners.TestRunner"/>
         </classes>
@@ -42,10 +45,10 @@
     </test>
 
     <test name="Desktop-Edge">
-        <parameter name="browser" value="edge"/>
+        <parameter name="browser" value="Edge"/>
         <parameter name="os" value="Windows"/>
         <parameter name="os_version" value="11"/>
-        <parameter name="browser_version" value="latest"/>
+        <parameter name="browser_version" value="137.0"/>
         <classes>
             <class name="io.github.karanarora18.runners.TestRunner"/>
         </classes>

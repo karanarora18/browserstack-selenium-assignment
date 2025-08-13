@@ -3,13 +3,16 @@ package io.github.karanarora18.pages;
 import io.github.karanarora18.frameworkconfig.driver.ElementActions;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElPaisHomePage extends ElementActions {
 
 
     // LOCATORS
-    By menu_opinion = By.xpath("//div[@class='sm _df']/a[text()='Opinión']");
+    By menu_opinion = By.xpath("//div[@id='hamburger_container']//a[text()='Opinión']");
+    By btn_hamburger = By.id("btn_open_hamburger");
     By accept_cookie = By.id("didomi-notice-agree-button");
 
     public ElPaisHomePage(WebDriver driver){
@@ -20,6 +23,7 @@ public class ElPaisHomePage extends ElementActions {
     public void selectFromMenuOptions(String option) {
         switch(option.toLowerCase()){
             case "opinion":
+                click(btn_hamburger);
                 click(menu_opinion);
                 break;
             default:
@@ -39,11 +43,6 @@ public class ElPaisHomePage extends ElementActions {
     }
 
     public void handleAlerts() {
-        try {
-            if (isELementPresent(accept_cookie)) {
-                click(accept_cookie);
-            }
-        }catch(Exception ignored){
-        }
+        handleCookieBanner(accept_cookie);
     }
 }
